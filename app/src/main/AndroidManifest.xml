@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ServiceBroadCastRKotlinWorkManagerRx" >
         <activity
-            android:name=".activity.ServiceController"
+            android:name=".activity.ServiceControllerActivity"
             android:exported="true" />
         <activity
             android:name=".activity.BaseActivity"
