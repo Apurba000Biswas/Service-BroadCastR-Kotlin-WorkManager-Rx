@@ -7,6 +7,8 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2563405797101449" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.2563405797101449" />
         <entry key="app/src/main/res/layout/activity_service_controller.xml" value="0.33229166666666665" />
+        <entry key="app/src/main/res/layout/pagination_default_footer.xml" value="0.34739583333333335" />
+        <entry key="app/src/main/res/layout/service_item.xml" value="0.34739583333333335" />
       </map>
     </option>
   </component>

@@ -47,4 +47,7 @@ dependencies {
 
     //SDP for View Scaling
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    // swipe to refresh
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
 }

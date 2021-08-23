@@ -5,7 +5,7 @@ import android.content.Intent
 import androidx.core.content.ContextCompat.startActivity
 
 class ActivityLauncher {
-    companion object FirstCompanion{
+    companion object {
         fun launchActivity(context: Context ,type : Class<*>){
             val intent = Intent(context, type)
             startActivity(context , intent, null)
