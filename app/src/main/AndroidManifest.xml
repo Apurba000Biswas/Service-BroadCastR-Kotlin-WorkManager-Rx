@@ -26,9 +26,11 @@
         </activity>
         <service
             android:name=".service.ItemLoaderBackgroundService"
-            android:exported="false">
+            android:exported="false"/>
 
-        </service>
+        <service
+            android:name=".service.ItemLoaderBoundService"
+            android:exported="false"/>
     </application>
 
 </manifest>

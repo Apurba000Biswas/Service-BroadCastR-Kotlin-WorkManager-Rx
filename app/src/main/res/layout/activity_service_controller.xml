@@ -21,7 +21,18 @@
             android:scrollbars="none"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
+
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <Button
+        android:layout_margin="@dimen/_10sdp"
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Load"
+        android:onClick="loadClicked"
+        app:layout_constraintBottom_toBottomOf="@+id/srl_pull_to_refresh"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 
