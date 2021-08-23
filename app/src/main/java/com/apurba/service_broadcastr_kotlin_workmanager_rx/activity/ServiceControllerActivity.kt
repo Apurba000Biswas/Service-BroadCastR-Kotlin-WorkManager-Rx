@@ -1,5 +1,6 @@
 package com.apurba.service_broadcastr_kotlin_workmanager_rx.activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -7,7 +8,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.apurba.service_broadcastr_kotlin_workmanager_rx.R
 import com.apurba.service_broadcastr_kotlin_workmanager_rx.adapter.SimpleLinearAdapter
+import com.apurba.service_broadcastr_kotlin_workmanager_rx.data.DataBase
 import com.apurba.service_broadcastr_kotlin_workmanager_rx.data.ServiceItem
+import com.apurba.service_broadcastr_kotlin_workmanager_rx.service.ItemLoaderBackgroundService
 
 class ServiceControllerActivity : AppCompatActivity() {
 
@@ -18,6 +21,7 @@ class ServiceControllerActivity : AppCompatActivity() {
         setContentView(R.layout.activity_service_controller)
 
         setRecyclerView()
+        loadData()
     }
 
     private fun setRecyclerView(){
@@ -31,26 +35,14 @@ class ServiceControllerActivity : AppCompatActivity() {
         adapter = SimpleLinearAdapter(R.layout.service_item)
         rvHome.adapter = adapter
 
+//        val dataSet = DataBase.getItemList(1)
+//        adapter.setDataSet(dataSet)
 
-        val dataSet = listOf(ServiceItem()
-            ,ServiceItem()
-            ,ServiceItem()
-            ,ServiceItem()
-            ,ServiceItem()
-            ,ServiceItem()
-            ,ServiceItem()
-            ,ServiceItem()
-            ,ServiceItem()
-            ,ServiceItem()
-            ,ServiceItem()
-            ,ServiceItem()
-            ,ServiceItem()
-            ,ServiceItem()
-            ,ServiceItem()
-            ,ServiceItem()
-            ,ServiceItem()
-            ,ServiceItem())
-        adapter.setDataSet(dataSet)
+    }
 
+    private fun loadData(){
+        Intent(this, ItemLoaderBackgroundService::class.java).also { intent ->
+            startService(intent)
+        }
     }
 }

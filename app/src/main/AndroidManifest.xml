@@ -24,10 +24,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity2"
-            android:exported="true" >
-        </activity>
+        <service
+            android:name=".service.ItemLoaderBackgroundService"
+            android:exported="false">
+
+        </service>
     </application>
 
 </manifest>
